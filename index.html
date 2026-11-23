@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio Three | Websites that win work on the Sunshine Coast</title>
+<meta name="description" content="Premium websites for Sunshine Coast trade and service businesses, built to bring in work and found in Google and AI search. Fixed quotes from $3,000.">
+<meta name="theme-color" content="#0E1020">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ============ HOW TO ADD YOUR PHOTOS ============
+ 1. Find the PHOTOS object in the <script> at the bottom.
+ 2. Paste a path or URL next to each key, e.g. hero:'img/joel-van.jpg'
+ 3. Each placeholder tells you its shape (e.g. 4:5) so you can crop to match.
+ Anything marked [PLACEHOLDER] must be replaced with real facts before launch. */
+:root{--ink:#0E1020;--ink2:#151833;--text:#EEF0FB;--muted:#9A9FBD;--coral:#FF7A50;--coral2:#FF9B78;--grid:#383D60;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{background:var(--ink);color:var(--text);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--coral2);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.label{font:500 12px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--coral2)}
+.muted{color:var(--muted)}
+.btn{display:inline-block;background:var(--coral);color:var(--ink);font-weight:600;padding:14px 28px;border-radius:99px;text-decoration:none;border:0;cursor:pointer;font-size:16px;box-shadow:0 0 0 0 rgba(255,122,80,.5);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{background:var(--coral2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,122,80,.35)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--grid);box-shadow:none}
+.btn.ghost:hover{border-color:var(--coral2)}
+section{position:relative}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+header.s{background:rgba(14,16,32,.88);backdrop-filter:blur(10px);border-color:rgba(56,61,96,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none;line-height:1}.logo b{color:var(--coral)}
+.nav ul{display:flex;gap:26px;list-style:none;padding:0;font-size:14px}.nav ul a{text-decoration:none;color:var(--muted)}.nav ul a:hover{color:var(--text)}
+.nav .btn{padding:9px 20px;font-size:14px}
+@media(max-width:760px){.nav ul{display:none}}
+/* placeholder */
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:#1a1e3c center/cover no-repeat;border:1px dashed #565d8c;display:flex;align-items:flex-end;min-height:0}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(154,159,189,.07) 14px 15px)}
+.ph span{position:relative;max-width:calc(100% - 28px);overflow-wrap:anywhere;margin:14px;font:500 11px/1.4 "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--coral2);background:rgba(14,16,32,.85);padding:6px 9px;border-radius:6px}
+.ph.has{border-style:solid;border-color:transparent}.ph.has::before,.ph.has span{display:none}
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:end;padding:120px 0 64px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;border-radius:0;border:0}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,32,.55) 0%,rgba(14,16,32,.35) 35%,var(--ink) 100%),linear-gradient(90deg,rgba(14,16,32,.85),transparent 70%)}
+.hero .bg span{position:absolute;right:16px;top:84px;margin:0}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,9.5vw,128px);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero h1 .ln{display:block;overflow:hidden}.hero h1 .ln>span{display:inline-block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
+@keyframes up{to{transform:none}}
+.hero p.lead{max-width:520px;font-size:19px;color:#c9cde6}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.scroll{position:absolute;right:22px;bottom:64px;z-index:2;writing-mode:vertical-rl;font:500 11px "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--muted)}
+.scroll::after{content:"";display:block;width:1px;height:46px;background:var(--coral);margin:10px auto 0;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.2}}
+@media(max-width:760px){.scroll{display:none}}
+/* marquee */
+.mq{border-block:1px solid var(--grid);overflow:hidden;background:var(--ink2);padding:16px 0;white-space:nowrap}
+.mq div{display:inline-flex;gap:34px;animation:mq 34s linear infinite;font:500 13px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.mq i{color:var(--coral);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* generic section */
+.sec{padding:110px 0}
+.sec h2{font-size:clamp(34px,5.4vw,66px);margin:14px 0 20px}
+.sec h2 em{font-style:normal;color:var(--coral)}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px;border-top:1px solid var(--grid);padding-top:28px}
+.stat b{display:block;font:800 clamp(28px,4vw,44px) "Bricolage Grotesque",sans-serif;color:var(--coral);letter-spacing:-.02em}
+.stat span{font:500 11px/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+/* services */
+.svc{display:grid;grid-template-columns:90px minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:center;padding:56px 0;border-top:1px solid var(--grid)}
+.svc:last-child{border-bottom:1px solid var(--grid)}
+.svc .n{font:800 clamp(52px,7vw,96px) "Bricolage Grotesque",sans-serif;color:transparent;-webkit-text-stroke:1.5px var(--coral);line-height:1}
+.svc h3{font-size:clamp(28px,3.6vw,44px);margin-bottom:6px}
+.svc .price{font:500 13px "JetBrains Mono",monospace;color:var(--coral2);letter-spacing:.06em;margin-bottom:14px}
+.svc ul{list-style:none;padding:0;margin:16px 0 22px}.svc li{padding:8px 0;border-bottom:1px solid rgba(56,61,96,.55);display:flex;gap:12px}
+.svc li::before{content:"◆";color:var(--coral);font-size:10px;line-height:2.4}
+.svc .ph{aspect-ratio:3/2}
+.svc .n{grid-area:n}.svc>div:nth-child(2){grid-area:t}.svc .ph{grid-area:p;align-self:center;width:100%}.svc{grid-template-areas:'n t p'}.svc:nth-of-type(even){grid-template-areas:'n p t'}
+@media(max-width:860px){.svc,.svc:nth-of-type(even){grid-template-columns:1fr;grid-template-areas:'n' 't' 'p'}.svc .n{font-size:56px}}
+/* before / after */
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.ba{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;--p:50%;user-select:none;touch-action:pan-y}
+.ba .layer{position:absolute;inset:0;border-radius:0}
+.ba .after{clip-path:inset(0 0 0 var(--p))}
+.ba .layer.ph{align-items:flex-start}
+.ba .after span{margin-left:auto}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:var(--coral);pointer-events:none}
+.ba .bar::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:var(--coral);color:var(--ink);display:grid;place-items:center;font-weight:700}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba:focus-within{outline:2px solid var(--coral2);outline-offset:3px}
+.cap{margin-top:12px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.ba-grid{grid-template-columns:1fr}}
+/* results */
+.res{background:var(--ink2);border-block:1px solid var(--grid)}
+.tag{display:inline-block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;color:var(--ink);background:var(--coral2);padding:4px 10px;border-radius:99px;margin-left:8px;vertical-align:middle}
+.res-grid>*,.about>*,.svc>*,.contact>*{min-width:0}
+.res-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;margin-top:40px}
+.case{border:1px dashed #565d8c;border-radius:var(--r);padding:28px;min-width:0;background:var(--ink)}
+.case .ph{aspect-ratio:16/9;margin-bottom:22px}
+.case h3{font-size:28px;margin-bottom:18px}
+.case dl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case dt{font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.case dt{overflow-wrap:anywhere}
+.case dd{font:800 34px "Bricolage Grotesque",sans-serif;color:var(--coral);margin:4px 0 0}
+.stack{display:grid;gap:22px}
+.quote{border:1px dashed #565d8c;border-radius:var(--r);padding:28px;background:var(--ink);font-size:20px;line-height:1.45}
+.quote small{display:block;margin-top:14px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+@media(max-width:860px){.res-grid{grid-template-columns:minmax(0,1fr)}.case{padding:20px}.case dd{font-size:26px}}
+/* break */
+.brk{padding:130px 0;text-align:center;overflow:hidden}
+.brk .bg{position:absolute;inset:0;border-radius:0;border-inline:0;opacity:.8}
+.brk .bg::after{content:"";position:absolute;inset:0;background:rgba(14,16,32,.7)}
+.brk .wrap{position:relative;z-index:2}
+.brk p{font:800 clamp(28px,5vw,60px)/1.08 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;max-width:900px;margin:0 auto}
+.brk p em{font-style:normal;color:var(--coral)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:1px solid var(--grid)}
+.step{padding:28px 24px 8px 0;position:relative}
+.step::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 14px var(--coral)}
+.step .label{display:block;margin-bottom:10px}
+.step h3{font-size:26px;margin-bottom:8px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;row-gap:20px}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+/* cta */
+.cta-s{padding:120px 0;text-align:center;overflow:hidden}
+.orb{position:absolute;left:50%;top:50%;width:min(720px,120vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,122,80,.38),rgba(255,122,80,0) 65%);animation:breathe 7s ease-in-out infinite;pointer-events:none}
+.orb::before,.orb::after{content:"";position:absolute;inset:18%;border-radius:50%;border:1px solid rgba(255,155,120,.3)}.orb::after{inset:32%}
+@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.08)}}
+.cta-s .wrap{position:relative}
+.cta-s h2{font-size:clamp(36px,6vw,78px);max-width:860px;margin:14px auto 22px}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact ul{list-style:none;padding:0;margin-top:28px;display:grid;gap:16px}
+.contact li small{display:block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ph-txt{border-bottom:1px dashed var(--coral2);color:var(--coral2)}
+form{display:grid;gap:18px}
+label{font-size:14px;font-weight:500;display:block;margin-bottom:6px}
+input,textarea{width:100%;background:var(--ink);color:var(--text);border:1px solid var(--grid);border-radius:10px;padding:13px 15px;font:inherit}
+input:focus,textarea:focus{border-color:var(--coral2)}
+.err{color:var(--coral2);font-size:14px;margin-top:4px}
+.hp{position:absolute;left:-9999px}
+#fs{min-height:24px}
+@media(max-width:860px){.contact{grid-template-columns:1fr;gap:40px}}
+footer{border-top:1px solid var(--grid);padding:34px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.nojs .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1 .ln>span{transform:none}}
+.sr{position:absolute;left:-9999px}.sr:focus{left:16px;top:16px;z-index:99;background:var(--coral);color:var(--ink);padding:8px 14px;border-radius:6px}
+</style>
+</head>
+<body class="nojs">
+<a class="sr" href="#main">Skip to content</a>
+<header id="hd"><div class="wrap nav">
+  <a class="logo" href="#top" aria-label="Studio Three home">Studio <b>Three</b></a>
+  <nav aria-label="Main"><ul><li><a href="#about">Why us</a></li><li><a href="#services">Services</a></li><li><a href="#results">Results</a></li><li><a href="#process">Process</a></li></ul></nav>
+  <a class="btn" href="#contact">Get a fixed quote</a>
+</div></header>
+
+<main id="main">
+<section class="hero" id="top">
+  <figure class="ph bg" data-photo="hero"><span>Photo placeholder · HERO · full-bleed 16:9 (Joel on a job site or at a desk, landscape)</span></figure>
+  <div class="wrap">
+    <p class="label">Web design / AI SEO / Sunshine Coast</p>
+    <h1 aria-label="Websites that win work."><span class="ln"><span>Websites</span></span><span class="ln"><span>that <em>win work.</em></span></span></h1>
+    <p class="lead">Premium websites for Sunshine Coast trade and service businesses, built to bring in enquiries and found in Google and AI search. Built by someone who has worked in the trades.</p>
+    <div class="cta"><a class="btn" href="#contact">Get a fixed quote</a><a class="btn ghost" href="#results">See the work</a><span class="label muted">From $3,000 · fixed quote</span></div>
+  </div>
+  <div class="scroll" aria-hidden="true">SCROLL</div>
+</section>
+
+<div class="mq" aria-hidden="true"><div>
+  <span>Websites that win work</span><i>◆</i><span>Fixed quote</span><i>◆</i><span>AI SEO</span><i>◆</i><span>Built for trades</span><i>◆</i><span>Sunshine Coast</span><i>◆</i><span>Websites that win work</span><i>◆</i><span>Fixed quote</span><i>◆</i><span>AI SEO</span><i>◆</i><span>Built for trades</span><i>◆</i><span>Sunshine Coast</span><i>◆</i>
+</div></div>
+
+<section class="sec" id="about"><div class="wrap about">
+  <div class="rv">
+    <p class="label">Why Studio Three</p>
+    <h2>A tradie's eye on <em>your</em> website.</h2>
+    <p class="muted">Joel spent years in plumbing, gas, HVAC, maintenance and technical sales, including Reece HVAC/Plumbing. He knows how your customers decide: a quick look on the phone, a glance at who looks legit, then a call.</p>
+    <p class="muted" style="margin-top:14px">So the sites are built around that moment. Clear services, clear area, an easy way to enquire, and set up so Google and AI search tools can find you.</p>
+    <div class="stats">
+      <div class="stat"><b data-count="3000" data-prefix="$">$3,000</b><span>Websites from, fixed quote</span></div>
+      <div class="stat"><b>1</b><span>Founder on every job</span></div>
+      <div class="stat"><b>AI</b><span>Search ready, not just Google</span></div>
+    </div>
+  </div>
+  <figure class="ph rv" data-photo="about"><span>Photo placeholder · PORTRAIT · 4:5 (Joel, work clothes, natural light)</span></figure>
+</div></section>
+
+<section class="sec" id="services" style="padding-top:20px"><div class="wrap">
+  <div class="rv"><p class="label">Services</p><h2>Two things, <em>done properly.</em></h2></div>
+  <article class="svc rv"><div class="n" aria-hidden="true">01</div>
+    <div><h3>Website design and build</h3><p class="price">FROM $3,000 · FIXED QUOTE</p><p class="muted">A premium website that turns visitors into enquiries.</p>
+      <ul><li>Design built around how your customers choose</li><li>Fast, modern build that is easy to update</li><li>Launch: live, tested and ready for enquiries</li></ul>
+      <a class="btn" href="#contact">Get a website quote</a></div>
+    <figure class="ph" data-photo="svc1"><span>Photo placeholder · 3:2 (laptop/phone mockup of a real client site)</span></figure></article>
+  <article class="svc rv"><div class="n" aria-hidden="true">02</div>
+    <div><h3>AI SEO for business pages</h3><p class="price">QUOTE ON REQUEST</p><p class="muted">Set up your website and business pages so AI search tools (ChatGPT, Google AI answers and others) can find and understand your business.</p>
+      <ul><li>Review of your website and business pages</li><li>Structured business info, clear service and location details</li><li>Content written to answer customer questions</li></ul>
+      <a class="btn" href="#contact">Ask about AI SEO</a></div>
+    <figure class="ph" data-photo="svc2"><span>Photo placeholder · 3:2 (AI search answer showing a client, or a screen capture)</span></figure></article>
+</div></section>
+
+<section class="sec res" id="results"><div class="wrap">
+  <div class="rv"><p class="label">Before + after <span class="tag">[PLACEHOLDER]</span></p>
+    <h2>Drag the line. <em>See the site.</em></h2>
+    <p class="muted" style="max-width:560px">Studio Three launched in November 2026, so there are no client sites here yet. Swap in real before and after screenshots as each job finishes.</p></div>
+  <div class="ba-grid">
+    <div class="rv"><div class="ba"><figure class="layer ph" data-photo="ba1b"><span>BEFORE · 4:5 · old site screenshot</span></figure><figure class="layer ph after" data-photo="ba1a"><span>AFTER · 4:5 · new site screenshot</span></figure><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after, example 1"></div><p class="cap">Client 1 · [business name]</p></div>
+    <div class="rv"><div class="ba"><figure class="layer ph" data-photo="ba2b"><span>BEFORE · 4:5</span></figure><figure class="layer ph after" data-photo="ba2a"><span>AFTER · 4:5</span></figure><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after, example 2"></div><p class="cap">Client 2 · [business name]</p></div>
+    <div class="rv"><div class="ba"><figure class="layer ph" data-photo="ba3b"><span>BEFORE · 4:5</span></figure><figure class="layer ph after" data-photo="ba3a"><span>AFTER · 4:5</span></figure><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after, example 3"></div><p class="cap">Client 3 · [business name]</p></div>
+  </div>
+
+  <div class="rv" style="margin-top:90px"><p class="label">Results <span class="tag">[PLACEHOLDER]</span></p><h2>What changed for <em>them.</em></h2>
+    <p class="muted" style="max-width:560px">Fill with real, agreed numbers only (ask the client first). Do not publish anything you cannot back up.</p></div>
+  <div class="res-grid">
+    <div class="case rv"><figure class="ph" data-photo="case1"><span>Photo placeholder · 16:9 · client at work or finished site</span></figure>
+      <h3>[Client business name], [trade]</h3>
+      <dl><div><dt>[Metric 1]</dt><dd>[00]</dd></div><div><dt>[Metric 2]</dt><dd>[00]</dd></div><div><dt>[Metric 3]</dt><dd>[00]</dd></div></dl></div>
+    <div class="stack">
+      <blockquote class="quote rv">“[Real client review, word for word, with their permission.]”<small>[Client name] · [business] · [Google review link]</small></blockquote>
+      <blockquote class="quote rv">“[Second real review.]”<small>[Client name] · [business]</small></blockquote>
+    </div>
+  </div>
+</div></section>
+
+<section class="brk"><figure class="ph bg" data-photo="break"><span style="position:absolute;right:16px;top:16px;margin:0">Photo placeholder · BAND · 21:9 (Sunshine Coast, Kings Beach or a job site)</span></figure>
+  <div class="wrap"><p class="rv">Your customers decide in seconds. <em>Make it an easy yes.</em></p></div></section>
+
+<section class="sec" id="process"><div class="wrap">
+  <div class="rv"><p class="label">How it works</p><h2>Plain steps. <em>No surprises.</em></h2></div>
+  <div class="steps">
+    <div class="step rv"><span class="label">01</span><h3>Talk</h3><p class="muted">Tell Joel about your business and what a good enquiry looks like.</p></div>
+    <div class="step rv"><span class="label">02</span><h3>Fixed quote</h3><p class="muted">A fixed quote in writing before any work starts.</p></div>
+    <div class="step rv"><span class="label">03</span><h3>Build</h3><p class="muted">Designed and built around how your customers choose.</p></div>
+    <div class="step rv"><span class="label">04</span><h3>Launch</h3><p class="muted">Live, tested and ready for enquiries.</p></div>
+  </div>
+  <p class="muted rv" style="margin-top:26px;font-size:14px">[CONFIRM: add timeframes only once you have confirmed what you can deliver.]</p>
+</div></section>
+
+<section class="cta-s"><div class="orb" aria-hidden="true"></div><div class="wrap">
+  <p class="label rv">Now quoting Sunshine Coast businesses</p>
+  <h2 class="rv">Get a website that <em style="font-style:normal;color:var(--coral)">brings in work.</em></h2>
+  <a class="btn rv" href="#contact">Get a fixed quote</a></div></section>
+
+<section class="sec" id="contact" style="padding-top:40px"><div class="wrap contact">
+  <div class="rv"><p class="label">Get a fixed quote</p><h2>Tell Joel what <em>you need.</em></h2>
+    <p class="muted">Send a few details and Joel will reply personally with next steps.</p>
+    <ul>
+      <li><small>Phone</small><span class="ph-txt">[ADD PHONE]</span></li>
+      <li><small>Email</small><span class="ph-txt">[ADD BUSINESS EMAIL]</span></li>
+      <li><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61596949886439" target="_blank" rel="noopener noreferrer">Message Studio Three</a></li>
+      <li><small>Hours</small><span class="ph-txt">[ADD HOURS]</span></li>
+      <li><small>Where we work</small>Sunshine Coast, QLD [CONFIRM suburbs]</li>
+    </ul></div>
+  <form id="f" class="rv" novalidate aria-label="Enquiry form">
+    <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <div><label for="n">Your name</label><input id="n" name="name" maxlength="100" autocomplete="name" required></div>
+    <div><label for="b">Business name <span class="muted">(optional)</span></label><input id="b" name="business" maxlength="100" autocomplete="organization"></div>
+    <div><label for="c">Email or phone</label><input id="c" name="contact" maxlength="120" autocomplete="email" required></div>
+    <div><label for="m">What do you need?</label><textarea id="m" name="message" rows="4" maxlength="1500" required></textarea></div>
+    <div><button class="btn" type="submit">Send enquiry</button></div>
+    <p id="fs" role="status" aria-live="polite"></p>
+    <p class="muted" style="font-size:14px">We only use your details to reply to this enquiry.</p>
+  </form>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Studio Three · Sunshine Coast, QLD</span><a href="https://www.facebook.com/profile.php?id=61596949886439" target="_blank" rel="noopener noreferrer">Facebook</a></div></footer>
+
+<script>
+/* ---- 1. YOUR PHOTOS: paste a path/URL per key. Empty = placeholder stays. ---- */
+const PHOTOS={hero:'',about:'',svc1:'',svc2:'',ba1b:'',ba1a:'',ba2b:'',ba2a:'',ba3b:'',ba3a:'',case1:'',break:''};
+/* ---- 2. FORM: paste a Formspree/Basin-style https URL. Empty = form says not connected. ---- */
+const FORM_ENDPOINT='';
+
+document.body.classList.remove('nojs');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('[data-photo]').forEach(el=>{const u=PHOTOS[el.dataset.photo];if(u){el.style.backgroundImage=`url("${u.replace(/"/g,'%22')}")`;el.classList.add('has')}});
+const hd=document.getElementById('hd');const sc=()=>hd.classList.toggle('s',scrollY>30);addEventListener('scroll',sc,{passive:true});sc();
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+/* hero parallax */
+const hb=document.querySelector('.hero .bg');
+if(!RM)addEventListener('scroll',()=>{if(scrollY<innerHeight)hb.style.transform=`translateY(${scrollY*.25}px) scale(1.06)`},{passive:true});
+/* count-up (real figure only) */
+document.querySelectorAll('[data-count]').forEach(el=>{const t=+el.dataset.count,p=el.dataset.prefix||'';if(RM)return;
+ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();const s=performance.now();(function f(n){const k=Math.min(1,(n-s)/1400),v=Math.round(t*(1-Math.pow(1-k,3)));el.textContent=p+v.toLocaleString('en-AU');if(k<1)requestAnimationFrame(f)})(s)}}).observe(el)});
+/* before/after sliders */
+document.querySelectorAll('.ba').forEach(b=>{const i=b.querySelector('input');i.addEventListener('input',()=>b.style.setProperty('--p',i.value+'%'))});
+/* form */
+const f=document.getElementById('f'),fs=document.getElementById('fs');
+f.addEventListener('submit',async e=>{e.preventDefault();const d=new FormData(f);if(d.get('website'))return;
+ const name=String(d.get('name')||'').trim(),contact=String(d.get('contact')||'').trim(),message=String(d.get('message')||'').trim(),business=String(d.get('business')||'').trim();
+ if(!name||!message||!(/^\S+@\S+\.\S+$/.test(contact)||/^[\d\s+()-]{8,}$/.test(contact))){fs.className='err';fs.textContent='Please add your name, a valid email or phone, and a short message.';return}
+ if(!FORM_ENDPOINT.startsWith('https://')){fs.className='err';fs.textContent="The enquiry form isn't connected yet. Please message Studio Three on Facebook.";return}
+ fs.className='';fs.textContent='Sending…';
+ try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name,business,contact,message})});
+  if(r.ok){f.reset();fs.textContent='Thanks. Your enquiry is in. Joel will reply personally.'}else throw 0}catch{fs.className='err';fs.textContent='Something went wrong. Please try again, or message us on Facebook.'}});
+</script>
+</body>
+</html>
